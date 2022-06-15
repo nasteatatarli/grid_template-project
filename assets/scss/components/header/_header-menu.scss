@@ -1,0 +1,22 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header-menu {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    @include md {
+        background-color: rgba(68, 89, 110, 0.25);
+        @include box-shadow;
+    }
+
+    &__container {
+        display: grid;
+
+        @extend %container;
+        grid-template-columns: auto 1fr;
+    }
+}
